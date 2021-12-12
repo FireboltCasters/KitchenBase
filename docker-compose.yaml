@@ -1,0 +1,41 @@
+version: '3'
+services:
+
+  app:
+    image: jwilder/whoami
+    environment:
+      - VIRTUAL_HOST=${HOST}
+      - VIRTUAL_PATH=/${DOMAIN_PATH}/whoami
+    networks:
+      - topDomainProxy
+
+  frontend:
+    container_name: ${DOMAIN_PATH}frontend
+    build: .
+    command: >
+      sh -c "
+        pwd &&
+        npm install --loglevel verbose &&
+        npm run deploy:web:local
+      "
+    env_file: .env
+    volumes:
+      - ./Frontend/app/node_modules/:/usr/app/node_modules/
+    restart: ${RESTART}
+    expose:
+      - ${FRONTEND_PORT}
+    networks:
+      - topDomainProxy
+    environment:
+      BASE_PATH: ${DOMAIN_PATH}/${FRONTEND_PATH}/
+      FRONTEND_CUSTOM_URL_FOR_BACKEND: ${FRONTEND_CUSTOM_URL_FOR_BACKEND}
+      BACKEND_URL: ${DOMAIN_PRE}://${HOST}/${DOMAIN_PATH}/${BACKEND_PATH}
+
+      VIRTUAL_HOST: ${HOST}
+      VIRTUAL_PATH: /${DOMAIN_PATH}/${FRONTEND_PATH}/
+      VIRTUAL_DEST: /
+      VIRTUAL_PORT: ${FRONTEND_PORT}
+
+networks:
+  topDomainProxy:
+    external: true
