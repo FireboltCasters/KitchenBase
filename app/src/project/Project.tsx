@@ -6,7 +6,6 @@ import {BaseTemplate} from "../KitchenHelper/templates/BaseTemplate";
 import {RegisteredRoutesMap} from "../KitchenHelper/navigation/RegisteredRoutesMap";
 import {MenuItem} from "../KitchenHelper/navigation/MenuItem";
 import {MyMenuRegisterer} from "../KitchenHelper/navigation/MyMenuRegisterer";
-import App from "../KitchenHelper/App";
 
 export default class Project {
 
@@ -15,7 +14,6 @@ export default class Project {
 	}
 
 	static registerRoutes(){
-
 		// Resource detail
 		RegisteredRoutesMap.registerRoute(Example, BaseTemplate, "Example", "example");
 
@@ -23,16 +21,13 @@ export default class Project {
 
 		// Side Menu for User
 		let userMenu = new MenuItem("topExample", "TopExample", null, null, null, null, true);
-		MyMenuRegisterer.registerUnauthenticatedMenu(userMenu);
-
-		userMenu.addChildMenuItems(Example);
+		MyMenuRegisterer.registerCommonMenu(userMenu);
+		userMenu.addChildMenuItems(new MenuItem("example", "Example", Example));
 
 	}
 
 	static async initApp() {
-
+		console.log("Project init")
 	}
 
 }
-
-App.registerPlugin(Project);
