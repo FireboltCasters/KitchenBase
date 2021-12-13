@@ -3,6 +3,7 @@ export default {
         BACKEND_URL: process.env.FRONTEND_CUSTOM_URL_FOR_BACKEND || process.env.BACKEND_URL || "https://se-services.informatik.uos.de/myapp/api",
         BASE_PATH: process.env.BASE_PATH || "myapp/app/",
     },
+        "scheme": "myapp",
         "name": "KitchenSink-app-native-base",
         "slug": "kitchensink-app-native-base",
         "version": "1.0.2",

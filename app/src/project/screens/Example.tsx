@@ -5,6 +5,7 @@ import ServerAPI from "../../KitchenHelper/ServerAPI";
 export const Example = (props) => {
 
 	const [ms, setMs] = useState(null);
+	const [date, setDate] = useState(new Date());
 	const [info, setInfo] = useState(null);
 
 	async function downloadServerStatus(){
@@ -15,10 +16,15 @@ export const Example = (props) => {
 		let msCalculated = endTime-startTime;
 		msCalculated = msCalculated.toFixed(0);
 		setMs(msCalculated);
+		setDate(new Date());
 
-		let users = await directus.users.readMany();
-		setInfo(users);
-		setTimeout(() => { downloadServerStatus(); }, 1000);
+		try{
+			let users = await directus.users.readMany();
+			setInfo(users);
+		} catch (err){
+			console.log(err);
+		}
+		//setTimeout(() => { downloadServerStatus(); }, 1000);
 	}
 
 	// corresponding componentDidMount
@@ -30,6 +36,7 @@ export const Example = (props) => {
 		<>
 			<Text>{"Welcome Home"}</Text>
 			<Text>{"MS: "+ms}</Text>
+			<Text>{date.toString()}</Text>
 			<Text>{JSON.stringify(info, null, 4)}</Text>
 		</>
 	)
