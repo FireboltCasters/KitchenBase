@@ -1,6 +1,3 @@
-import "primereact/resources/themes/saga-blue/theme.css"
-import "primereact/resources/primereact.min.css"
-import "primeicons/primeicons.css"
 import {Example} from "./screens/Example";
 import {BaseTemplate} from "../KitchenHelper/templates/BaseTemplate";
 import {RegisteredRoutesMap} from "../KitchenHelper/navigation/RegisteredRoutesMap";
