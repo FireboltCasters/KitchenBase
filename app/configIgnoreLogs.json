@@ -7,4 +7,5 @@
   "Possible",
   "VirtualizedLists should never be nested",
   "Warning: Each child in a list should have a unique \"key\" prop",
+  "export 'LogBox' was not found in 'react-native-web/dist/index'"
 ]
