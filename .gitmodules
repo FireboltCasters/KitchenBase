@@ -1,0 +1,3 @@
+[submodule "app/src/KitchenHelper"]
+	path = app/src/KitchenHelper
+	url = https://github.com/FireboltCasters/KitchenHelper
