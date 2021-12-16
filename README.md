@@ -2,6 +2,8 @@
 
 ## Setup
 
+- Pull submodules: ```git submodule update --init --recursive```
+
 ### Native Mobile App
 
 In order to use the login system with SSO, we need to configure the deep linking.
