@@ -12,9 +12,10 @@ In order to use the login system with SSO, we need to configure the deep linking
 - Example ios: ```npx uri-scheme add myapp --ios```
 - Example android: ```npx uri-scheme add myapp --android```
 
-## Docker-Compose (with Server-Top-
-- Install and configure a proxy to your docker-instance (for example with https://github.com/FireboltCasters/Server-Toplevel-Proxy)
-- Run ```docker-compose up```
+## Docker-Compose
+- Install and configure a proxy to route requests your docker-instance (for example with https://github.com/FireboltCasters/Server-Toplevel-Proxy)
+- Run ```docker-compose up --build```
+- After that you can simple start and stop with ```docker-compose up``` and ```docker-compose down```
 
 
 ## Web App
