@@ -6,10 +6,10 @@ If you want to display and use ads (for example admob) follow these next steps:
 
 ## iOS
     - ```npx pod-install```
-    - Add to your Info.plist file in app/ios/
+    - Add to your Info.plist file in app/ios/ and replace `ca-app-pub-XXXXXXXXXXXXXXXXX~XXXXXXXXXX` with your value
     ```
     <key>GADApplicationIdentifier</key>
-    <string>$ca-app-pub-XXXXXXXXXXXXXXXXX~XXXXXXXXXX</string>
+    <string>ca-app-pub-XXXXXXXXXXXXXXXXX~XXXXXXXXXX</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>This identifier will be used to deliver personalized ads to you.</string>
     ```
