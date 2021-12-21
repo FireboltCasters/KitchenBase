@@ -1,8 +1,7 @@
 # Ad Configuration
 
-If you want to display and use ads (for example admob) follow these steps:
-- https://docs.expo.dev/versions/latest/sdk/admob/
-- https://github.com/expo/expo/tree/master/packages/expo-ads-admob#installation-in-bare-react-native-projects
+If you want to display and use ads (for example admob) follow these next steps:
+- If you have trouble use the steps taken from: https://docs.expo.dev/versions/latest/sdk/admob/ and https://github.com/expo/expo/tree/master/packages/expo-ads-admob#installation-in-bare-react-native-projects
 - Run ```expo install expo-ads-admob``` (in /app/ )
 
 ## iOS
