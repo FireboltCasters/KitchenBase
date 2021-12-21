@@ -21,3 +21,7 @@ In order to use the login system with SSO, we need to configure the deep linking
 ## Web App
 
 - Run ```npm run web``` (with active internet connection
+
+
+## Ads
+Please read the AD_README.md
