@@ -1,4 +1,4 @@
-package com.geekyants.kitchensinkappnativebase;
+package de.fireboltcasters.kitchenbase;
 
 import android.os.Bundle;
 

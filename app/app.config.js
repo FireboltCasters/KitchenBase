@@ -20,14 +20,14 @@ export default {
         "assetBundlePatterns": ["**/*"],
         "ios": {
             "supportsTablet": true,
-            "bundleIdentifier": "de.nilsbaumgartner.raiders-of-storm"
+            "bundleIdentifier": "de.fireboltcasters.kitchenbase"
         },
         "android": {
             "adaptiveIcon": {
                 "foregroundImage": "./assets/adaptive-icon.png",
                 "backgroundColor": "#FFFFFF"
             },
-            "package": "com.geekyants.kitchensinkappnativebase"
+            "package": "de.fireboltcasters.kitchenbase"
         },
         "web": {
             "favicon": "./assets/favicon.png",

@@ -4824,6 +4824,14 @@
     "path": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/duplexify",
     "licenseFile": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/duplexify/LICENSE"
   },
+  "easy-peasy@5.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ctrlplusb/easy-peasy",
+    "publisher": "Sean Matheson",
+    "email": "sean@ctrlplusb.com",
+    "path": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/easy-peasy",
+    "licenseFile": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/easy-peasy/LICENSE"
+  },
   "ecc-jsbn@0.1.2": {
     "licenses": "MIT",
     "repository": "https://github.com/quartzjer/ecc-jsbn",
@@ -11411,6 +11419,14 @@
     "repository": "https://github.com/arcanis/ts-pnp",
     "path": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/ts-pnp",
     "licenseFile": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/ts-pnp/README.md"
+  },
+  "ts-toolbelt@9.6.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/millsp/ts-toolbelt",
+    "publisher": "Pierre-Antoine Mills",
+    "url": "https://github.com/millsp",
+    "path": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/ts-toolbelt",
+    "licenseFile": "/Users/nbaumgartner/Documents/GitHub/KitchenBase/app/node_modules/ts-toolbelt/LICENSE"
   },
   "tslib@2.3.1": {
     "licenses": "0BSD",

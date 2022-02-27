@@ -25,7 +25,7 @@
 			<dict>
 				<key>CFBundleURLSchemes</key>
 				<array>
-					<string>com.geekyants.kitchensinkappnativebase</string>
+					<string>de.fireboltcasters.kitchenbase</string>
 				</array>
 			</dict>
 			<dict>
