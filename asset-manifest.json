@@ -1,0 +1,32 @@
+{
+  "files": {
+    "app.js": "/KitchenBase/static/js/app.f048cbcc.chunk.js",
+    "app.js.map": "/KitchenBase/static/js/app.f048cbcc.chunk.js.map",
+    "runtime~app.js": "/KitchenBase/static/js/runtime~app.4a503634.js",
+    "runtime~app.js.map": "/KitchenBase/static/js/runtime~app.4a503634.js.map",
+    "static/js/2.2bdef967.chunk.js": "/KitchenBase/static/js/2.2bdef967.chunk.js",
+    "static/js/2.2bdef967.chunk.js.map": "/KitchenBase/static/js/2.2bdef967.chunk.js.map",
+    "fonts/AntDesign.ttf": "/KitchenBase/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/KitchenBase/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/KitchenBase/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/KitchenBase/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/KitchenBase/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/KitchenBase/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/KitchenBase/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/KitchenBase/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/KitchenBase/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/KitchenBase/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/KitchenBase/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/KitchenBase/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/KitchenBase/favicon-16.png",
+    "favicon-32.png": "/KitchenBase/favicon-32.png",
+    "favicon.ico": "/KitchenBase/favicon.ico",
+    "index.html": "/KitchenBase/index.html",
+    "serve.json": "/KitchenBase/serve.json"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.4a503634.js",
+    "static/js/2.2bdef967.chunk.js",
+    "static/js/app.f048cbcc.chunk.js"
+  ]
+}
