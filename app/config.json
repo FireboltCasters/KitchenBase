@@ -1,13 +1,16 @@
 {
-  "title": "SSO-Stud.IP Universität Osnabrück",
+  "title": "RocketMealsApp",
   "codepush": {
     "active": false,
     "deploymentType": "staging",
     "keys": {
-      "android": null,
       "ios": {
-        "staging": "Pfw7jagN7fQ35MPBp68K-QwUQ5uoUQdVqqFEu",
-        "producation": "Dy6E3USWsKHWuwlkBCu-kolBiohYb8JQ-Yals"
+        "staging": "Plw6M0t6IkCBp29Wg6MgWaXXp2hrSG4H1AnEE",
+        "production": "7YS1t2jKPztIQOHNpZQBgc9z87vGFFP3dnnc_"
+      },
+      "android": {
+        "staging": "mcIPZG1SHVhey5GIFE9fAI-AHwGY6a1Ydao3K",
+        "production": "w_SCyWBJwcAsYF1KmWj-LoIE50QhdJHiPheck"
       }
     }
   },

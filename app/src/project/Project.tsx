@@ -1,34 +1,93 @@
-import {Example} from "./screens/Example";
-import {BaseTemplate} from "../KitchenHelper/templates/BaseTemplate";
-import {RegisteredRoutesMap} from "../KitchenHelper/navigation/RegisteredRoutesMap";
-import {MenuItem} from "../KitchenHelper/navigation/MenuItem";
-import {MyMenuRegisterer} from "../KitchenHelper/navigation/MyMenuRegisterer";
-import {SynchedVariableText} from "./screens/SynchedVariableText";
-import SynchedState from "../KitchenHelper/synchedstate/SynchedState";
-import {MySynchedStates} from "./helper/MySynchedStates";
+import React from "react";
 
-export default class Project {
+import {
+  PluginInterface,
+} from "kitcheningredients";
 
-	static topPluginContent(){
+import {SynchedStateKeys} from "./helper/SynchedStateKeys";
+import {StorageKeys} from "./helper/StorageKeys";
+import {MySync} from "./MySync";
+import {MyLoading} from "./MyLoading";
+import {MyRoot} from "./MyRoot";
+import {ExampleHomeComponent} from "./testScreens/ExampleHomeComponent";
+
+export default class Project extends PluginInterface{
+
+	constructor() {
+		super();
+	}
+
+	getSynchedStateKeysClass(){
+		return SynchedStateKeys;
+	}
+
+	getStorageKeysClass(){
+		return StorageKeys;
+	}
+
+  async registerRoutes(user, role, permissions){
+	  /**
+	  	  console.log("registerRoutes");
+	  	  console.log(user);
+	  Menu.registerRoute(ExampleScreen, EmptyTemplate, "Example", "example");
+    Menu.registerCommonMenu(new MenuItem("Example", "Example"+user?.role, ExampleScreen))
+     */
+	}
+
+	async initApp() {
+		console.log("Project init")
+	}
+
+	async onLogin(user, role){
+
+	}
+
+	async onLogout(error){
+		if(!error){
+			//normal logout
+		} else {
+			//logout on error
+		}
+	}
+
+	getAboutUsComponent() {
+    return null
+	}
+
+	getPrivacyPolicyComponent() {
+    return null
+	}
+
+	getTermsAndConditionsComponent() {
+    return null
+	}
+
+	getHomeComponent(): any {
+    return <ExampleHomeComponent />
+	}
+
+  getLoadingComponent(){
+	  return <MyLoading />;
+  }
+
+  getSyncComponent(): any {
+    return <MySync />
+  }
+
+	getRootComponent(){
+	  return <MyRoot />
+	}
+
+	renderCustomAuthProviders(serverInfo): []{
+		//@ts-ignore
 		return null;
 	}
 
-	static registerRoutes(){
-		SynchedState.registerSynchedStates(MySynchedStates.getListOfSynchedKeys())
-		// Resource detail
-		RegisteredRoutesMap.registerRoute(Example, BaseTemplate, "Example", "example");
-		RegisteredRoutesMap.registerRoute(SynchedVariableText, BaseTemplate, "SynchedVariableText", "synchedVariableText")
-
-		// Side Menu for User
-		let userMenu = new MenuItem("topExample", "TopExample", null, null, null, null, true);
-		MyMenuRegisterer.registerCommonMenu(userMenu);
-		userMenu.addChildMenuItems(new MenuItem("example", "Example", Example));
-		userMenu.addChildMenuItems(new MenuItem("synchedVariableText", "SynchedVariableText", SynchedVariableText));
-
+	getSettingsComponent(): any {
+		//return null // we have overwritten it
 	}
 
-	static async initApp() {
-		console.log("Project init")
+	getCustomProjectLogoComponent(): any {
 
 	}
 
