@@ -11,11 +11,15 @@ services:
 
   frontend:
     container_name: ${DOMAIN_PATH}frontend
-    build: .
+    image: node:12.18.1
     command: >
       sh -c "
-        pwd &&
+        cd /usr/app &&
+        npm install &&
         npm install --loglevel verbose &&
+        npm install webpack@4.43.0 &&
+        npm install @unimodules/core &&
+        npm install file-loader &&
         npm run deploy:web:local
       "
     env_file: .env
