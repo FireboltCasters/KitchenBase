@@ -1,0 +1,27 @@
+name: GH-Pages
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: cd ./app/ && npm ci
+      - run: git config --global user.name 'Firebolt Caster'
+      - run: git config --global user.email 'nilsbaumgartner@live.de'
+      #https://www.npmjs.com/package/gh-pages
+      - run: |
+          cd ./app
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          CI=false npm run deployghpages -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+
